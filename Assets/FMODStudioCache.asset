@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 114839286122643292}
+  - {fileID: 114921511541249646}
+  EditorEvents:
+  - {fileID: 114723522815452866}
+  MasterBanks:
+  - {fileID: 114921511541249646}
+  StringsBanks:
+  - {fileID: 114839286122643292}
+  stringsBankWriteTime: 636989693967303432
+  cacheVersion: 3
+--- !u!114 &114723522815452866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FootSteps
+  m_EditorClassIdentifier: 
+  Path: event:/FootSteps
+  guid: 3479194f1c013448a6eb6473e0f5bd27
+  Banks:
+  - {fileID: 114921511541249646}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 420
+--- !u!114 &114839286122643292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: fmodproject\fmod project\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636989693967303432
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 720
+  Exists: 1
+--- !u!114 &114921511541249646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Sgreenland\Downloads\DizzyFarm\fmodproject\fmod project\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636989693967253550
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 17984
+  Exists: 1
