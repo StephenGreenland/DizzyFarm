@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e476ff0f64a9e4482550fe4d5da024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   footstepEvent: event:/FootSteps
+  randomrange: 0
 --- !u!135 &406879020
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -159,7 +159,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 4
   m_Center: {x: 0.000000007450581, y: 0.36196527, z: 0.00050891936}
 --- !u!114 &6827721927228564261
 MonoBehaviour:

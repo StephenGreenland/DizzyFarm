@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using FMOD.Studio;
 using FMODUnity;
 
 
 public class ChickenScript : MonoBehaviour
 {
-    private List<GameObject> spookypeople;
     
-    public GameObject player;
-
+    #region Variables
+    
+    private List<GameObject> spookypeople;
+   
     private NavMeshAgent _agent;
 
     private float runDistance = 4f;
@@ -25,41 +23,32 @@ public class ChickenScript : MonoBehaviour
     public string footstepEvent;
 
     private float runSpeed;
+
+    public float randomrange;
+    #endregion
     
 
-    // Start is called before the first frame update
+
+
     void Start()
     {
-
-        runSpeed = 1f;
+        runSpeed = 5f;
         
         RuntimeManager.PlayOneShotAttached(footstepEvent, gameObject);
         
-
-       t = transform; 
+        t = transform; 
         
         spookypeople = new List<GameObject>();
         
         _agent = gameObject.GetComponent<NavMeshAgent>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-
-        float distance = Vector3.Distance(t.position,
-            player.gameObject.transform.position);
-
-        if (distance < runDistance)
+        if (spookypeople.Count != 0)
         {
-            Vector3 dirToPlayer = transform.position - player.transform.position;
-            dirToPlayer.Normalize();
-
-            Vector3 tempPos = transform.position + dirToPlayer * runSpeed;
-
-            _agent.SetDestination(tempPos);
+            Run();
         }
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -69,8 +58,7 @@ public class ChickenScript : MonoBehaviour
             spookypeople.Add(other.gameObject);
 
             print(spookypeople[0]);
-        }    
-        
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -80,8 +68,6 @@ public class ChickenScript : MonoBehaviour
             print(spookypeople[0]);
             
             spookypeople.Remove(other.gameObject);
-
-            
         }
     }
 
@@ -94,7 +80,24 @@ public class ChickenScript : MonoBehaviour
             averageDis = averageDis + spookypeople[i].transform.position;
         }
 
+        averageDis = averageDis / spookypeople.Count;
+        
+        Debug.DrawLine(averageDis,averageDis+Vector3.up*10f, Color.red);
+        
         return averageDis;
     }
 
+    void Run()
+    {
+        Vector3 dirToPlayer = transform.position - getRunDirection();
+        dirToPlayer.Normalize();
+
+        Vector3 tempPos = transform.position + dirToPlayer * runSpeed;
+
+        _agent.SetDestination(tempPos + new Vector3(randomrange+Random.Range(-2f,2f), 0 , -randomrange+Random.Range(-2f,2f))); 
+        
+    }
+    
+    
+    
 }

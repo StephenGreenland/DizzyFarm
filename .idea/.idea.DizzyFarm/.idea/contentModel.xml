@@ -102,6 +102,7 @@
           <e p="SmallAnimal.cs" t="Include" />
           <e p="Threats.cs" t="Include" />
         </e>
+        <e p="SpawnChickens.cs" t="Include" />
         <e p="VertexColorFarmAnimals" t="Include">
           <e p="Shaders" t="Include">
             <e p="VertexColorUnlit.shader" t="Include" />
