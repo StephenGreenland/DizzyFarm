@@ -47,7 +47,6 @@ public class BarnScript : MonoBehaviour
             print("do the thing!");
 
             score++;
-
             
             Score.text = score.ToString();
 
