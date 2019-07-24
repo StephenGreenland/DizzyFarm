@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BarnScript : MonoBehaviour
 {
@@ -9,28 +10,33 @@ public class BarnScript : MonoBehaviour
     public delegate void Chickenhome();
     public static event Chickenhome OnInpen;
 
-    public Slider Chickens;
-    
+    public Text Score;
+    public Text timer;
 
     int score;
+    private float timeLeft;
     
     // Start is called before the first frame update
-    void onEnable()
+    void Start()
     {
         score = 0;
-
+        timeLeft = 180f;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (score > 4)
-        {
+        timeLeft = timeLeft - Time.deltaTime;
 
-            Debug.Log("you got all da chickens");
+        if (timeLeft < 0)
+        {
+            SceneManager.LoadScene(1);
 
         }
+        timer.text = timeLeft.ToString();
+
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -42,7 +48,8 @@ public class BarnScript : MonoBehaviour
 
             score++;
 
-            Chickens.value = score;
+            
+            Score.text = score.ToString();
 
             OnInpen?.Invoke();
 
