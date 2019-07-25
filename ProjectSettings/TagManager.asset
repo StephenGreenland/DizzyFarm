@@ -6,6 +6,7 @@ TagManager:
   tags:
   - hand
   - Chicken
+  - Interactable
   layers:
   - Default
   - TransparentFX
