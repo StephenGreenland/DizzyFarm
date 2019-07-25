@@ -8,7 +8,7 @@ public class SpawnChickens : MonoBehaviour
     public GameObject chicken;
     private Vector3 myPosition;
     
-    // Start is called before the first frame update
+   
     void Start()
     {
         myPosition = transform.position;

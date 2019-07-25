@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 6832062323268762775}
   - component: {fileID: 6832062323268762771}
   - component: {fileID: 406879018}
-  - component: {fileID: 406879024}
   - component: {fileID: 406879020}
   - component: {fileID: 6827721927228564261}
+  - component: {fileID: 406879024}
+  - component: {fileID: 6708719727510156766}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Chicken
@@ -63,6 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 2100000, guid: d4b810f74d76b894eb609452ced6bf7b, type: 2}
   - {fileID: 2100000, guid: d4b810f74d76b894eb609452ced6bf7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -134,20 +136,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &406879024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6832062323268762772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47e476ff0f64a9e4482550fe4d5da024, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  footstepEvent: event:/FootSteps
-  randomrange: 0
 --- !u!135 &406879020
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -184,3 +172,31 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: -1
   OverrideMaxDistance: -1
+--- !u!114 &406879024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6832062323268762772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e476ff0f64a9e4482550fe4d5da024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepEvent: event:/FootSteps
+  currentstate: {fileID: 0}
+  randomrange: 0
+--- !u!114 &6708719727510156766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6832062323268762772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce89bd84adae799419fa2bf1c8e7e430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chickenScript: {fileID: 406879024}

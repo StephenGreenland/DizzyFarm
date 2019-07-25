@@ -99,7 +99,10 @@
           <e p="FarmEvent.cs" t="Include" />
           <e p="fizbuzz.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="RunState.cs" t="Include" />
+          <e p="Scores.cs" t="Include" />
           <e p="SmallAnimal.cs" t="Include" />
+          <e p="stateBase.cs" t="Include" />
           <e p="Threats.cs" t="Include" />
         </e>
         <e p="SpawnChickens.cs" t="Include" />

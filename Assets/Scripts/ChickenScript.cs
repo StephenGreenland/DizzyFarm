@@ -11,9 +11,9 @@ public class ChickenScript : MonoBehaviour
     
     private List<GameObject> spookypeople;
    
-    private NavMeshAgent _agent;
+    public NavMeshAgent _agent;
 
-    private float runDistance = 4f;
+    public float runDistance = 4f;
 
     private Vector3 averageDis;
 
@@ -22,7 +22,9 @@ public class ChickenScript : MonoBehaviour
     [EventRef]
     public string footstepEvent;
 
-    private float runSpeed;
+    public float runSpeed;
+
+    public StateBase currentstate;
 
     public float randomrange;
     #endregion
@@ -41,13 +43,16 @@ public class ChickenScript : MonoBehaviour
         spookypeople = new List<GameObject>();
         
         _agent = gameObject.GetComponent<NavMeshAgent>();
+        
+        currentstate = new RunState();
     }
     
     void Update()
     {
         if (spookypeople.Count != 0)
         {
-            Run();
+            currentstate.Execute();
+            //Run();
         }
     }
 
@@ -71,7 +76,7 @@ public class ChickenScript : MonoBehaviour
         }
     }
 
-    Vector3 getRunDirection()
+     public Vector3 getRunDirection()
     {
         averageDis = Vector3.zero;
         
@@ -87,7 +92,7 @@ public class ChickenScript : MonoBehaviour
         return averageDis;
     }
 
-    void Run()
+   /* void Run()
     {
         Vector3 dirToPlayer = transform.position - getRunDirection();
         dirToPlayer.Normalize();
@@ -96,8 +101,15 @@ public class ChickenScript : MonoBehaviour
 
         _agent.SetDestination(tempPos + new Vector3(randomrange+Random.Range(-2f,2f), 0 , -randomrange+Random.Range(-2f,2f))); 
         
+    } */
+
+    public void ChanageState(StateBase newstate)
+    {
+        currentstate.Exit();
+        newstate.Enter();
+        currentstate = newstate;
     }
     
     
-    
+ 
 }
