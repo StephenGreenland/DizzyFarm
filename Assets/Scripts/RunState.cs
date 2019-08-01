@@ -21,10 +21,16 @@ public class RunState : StateBase
 
         Vector3 tempPos = transform.position + dirToPlayer * chickenScript.runSpeed;
 
-        chickenScript._agent.SetDestination(tempPos + new Vector3(chickenScript.randomrange+Random.Range(-2f,2f), 0 , -chickenScript.randomrange+Random.Range(-2f,2f))); 
+        chickenScript._agent.SetDestination(tempPos + new Vector3(chickenScript.randomrange+Random.Range(-2f,2f), 0 , -chickenScript.randomrange+Random.Range(-2f,2f)));
 
-
-        chickenScript.ChanageState(GetComponent<RunState>());
+        if (chickenScript.spookypeople.Count == 0)
+        {
+            chickenScript.ChanageState(chickenScript.idleState);
+            
+        }
+        
+        
+        
     }
 
     public override void Exit()

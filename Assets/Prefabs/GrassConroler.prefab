@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grassPrefabs:
   - {fileID: 1636262058372710, guid: 5860ea14cc59297489223425de119e3c, type: 3}
-  grassNumber: 64
-  grassAreaWidth: 10
-  grassAreaHeight: 10
+  grassNumber: 8
+  grassAreaWidth: 3
+  grassAreaHeight: 3
   interactionTag: Player

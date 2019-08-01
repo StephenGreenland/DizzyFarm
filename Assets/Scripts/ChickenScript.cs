@@ -9,7 +9,7 @@ public class ChickenScript : MonoBehaviour
     
     #region Variables
     
-    private List<GameObject> spookypeople;
+    public List<GameObject> spookypeople;
    
     public NavMeshAgent _agent;
 
@@ -25,8 +25,14 @@ public class ChickenScript : MonoBehaviour
     public float runSpeed;
 
     public StateBase currentstate;
-
+    public StateBase runState;
+    public StateBase idleState;
+    public StateBase roamState;
+    
+    
+    public Vector3 wayPoint;
     public float randomrange;
+  
     #endregion
     
 
@@ -34,6 +40,12 @@ public class ChickenScript : MonoBehaviour
 
     void Start()
     {
+        runState = GetComponent<RunState>();
+        idleState = GetComponent<IdleState>();
+        roamState = GetComponent<RoamState>();
+        
+        ChanageState(GetComponent<IdleState>());
+        
         runSpeed = 5f;
         
         RuntimeManager.PlayOneShotAttached(footstepEvent, gameObject);
@@ -44,16 +56,18 @@ public class ChickenScript : MonoBehaviour
         
         _agent = gameObject.GetComponent<NavMeshAgent>();
         
-        currentstate = new RunState();
+        
     }
     
     void Update()
     {
+        Debug.Log(currentstate);
         if (spookypeople.Count != 0)
         {
-            currentstate.Execute();
-            //Run();
+            ChanageState(runState);
+            
         }
+        currentstate.Execute();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -92,18 +106,7 @@ public class ChickenScript : MonoBehaviour
         return averageDis;
     }
 
-   /* void Run()
-    {
-        Vector3 dirToPlayer = transform.position - getRunDirection();
-        dirToPlayer.Normalize();
-
-        Vector3 tempPos = transform.position + dirToPlayer * runSpeed;
-
-        _agent.SetDestination(tempPos + new Vector3(randomrange+Random.Range(-2f,2f), 0 , -randomrange+Random.Range(-2f,2f))); 
-        
-    } */
-
-    public void ChanageState(StateBase newstate)
+     public void ChanageState(StateBase newstate)
     {
         currentstate.Exit();
         newstate.Enter();
@@ -111,5 +114,4 @@ public class ChickenScript : MonoBehaviour
     }
     
     
- 
 }

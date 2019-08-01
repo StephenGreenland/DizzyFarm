@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 6827721927228564261}
   - component: {fileID: 406879024}
   - component: {fileID: 6708719727510156766}
+  - component: {fileID: 8249358316903706319}
+  - component: {fileID: 919892601472029536}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Chicken
@@ -64,8 +66,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d4b810f74d76b894eb609452ced6bf7b, type: 2}
-  - {fileID: 2100000, guid: d4b810f74d76b894eb609452ced6bf7b, type: 2}
+  - {fileID: 2100000, guid: 9a5480d8a9c7563458f1c5148349d1f8, type: 2}
+  - {fileID: 2100000, guid: 9a5480d8a9c7563458f1c5148349d1f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,7 +149,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 4
   m_Center: {x: 0.000000007450581, y: 0.36196527, z: 0.00050891936}
 --- !u!114 &6827721927228564261
 MonoBehaviour:
@@ -184,8 +186,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e476ff0f64a9e4482550fe4d5da024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spookypeople: []
+  _agent: {fileID: 0}
+  runDistance: 4
   footstepEvent: event:/FootSteps
-  currentstate: {fileID: 0}
+  runSpeed: 0
+  currentstate: {fileID: 6708719727510156766}
+  runState: {fileID: 0}
+  idleState: {fileID: 0}
+  roamState: {fileID: 0}
+  wayPoint: {x: 0, y: 0, z: 0}
   randomrange: 0
 --- !u!114 &6708719727510156766
 MonoBehaviour:
@@ -197,6 +207,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce89bd84adae799419fa2bf1c8e7e430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chickenScript: {fileID: 406879024}
+--- !u!114 &8249358316903706319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6832062323268762772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b04c7b565cb2a54086d8f26d4312b86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chickenScript: {fileID: 406879024}
+--- !u!114 &919892601472029536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6832062323268762772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb479f516f02e645ae6ee04e2870e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chickenScript: {fileID: 406879024}

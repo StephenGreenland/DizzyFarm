@@ -11,6 +11,7 @@ using UnityEngine;
         public virtual void Enter()
         {
             
+
         }
 
         public virtual void  Execute()
