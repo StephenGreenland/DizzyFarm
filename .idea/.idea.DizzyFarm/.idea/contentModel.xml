@@ -261,6 +261,7 @@
           <e p="FarmEvent.cs" t="Include" />
           <e p="fizbuzz.cs" t="Include" />
           <e p="IdleState.cs" t="Include" />
+          <e p="PerlinFence.cs" t="Include" />
           <e p="PerlinNoiseGenerator.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="RoamState.cs" t="Include" />

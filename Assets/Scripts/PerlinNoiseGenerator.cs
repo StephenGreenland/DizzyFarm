@@ -5,7 +5,7 @@ using UnityEngine;
 public class PerlinNoiseGenerator : MonoBehaviour
 {
     //how many objects to spawn
-    public int count = 200;
+    public int count = 100;
     //placement area (your level) width
     public float x = 100f;
     //placement area (your level) length
@@ -43,6 +43,7 @@ public class PerlinNoiseGenerator : MonoBehaviour
         //for loop to go through how many objects we want
         for (int i = 0; i < count; i++)
         {
+
             do
             {
                 //Pick a new random position
