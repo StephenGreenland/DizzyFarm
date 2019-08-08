@@ -30,8 +30,8 @@ public class SpawnChickens : MonoBehaviour
 
     private void SpawnChicken()
     {
-        Instantiate(chicken, new Vector3(myPosition.x+Random.Range(-5f,5f),myPosition.y+Random.Range(-5f,5f),myPosition.z+Random.Range(-5f,5f)),transform.rotation);
-        timer = 5f;
+        Instantiate(chicken, new Vector3(myPosition.x+Random.Range(-20f,20f),myPosition.y,myPosition.z+Random.Range(-20f,20f)),transform.rotation);
+        timer = 10f;
     }
     
     

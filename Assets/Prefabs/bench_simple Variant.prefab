@@ -59,6 +59,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 103558, guid: c31ef79546f5eb54cb870b5c1cfc01a7, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 498098, guid: c31ef79546f5eb54cb870b5c1cfc01a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.01
@@ -131,6 +135,10 @@ PrefabInstance:
     - target: {fileID: 103558, guid: c31ef79546f5eb54cb870b5c1cfc01a7, type: 3}
       propertyPath: m_Name
       value: bench_simple Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 103558, guid: c31ef79546f5eb54cb870b5c1cfc01a7, type: 3}
+      propertyPath: m_TagString
+      value: Fence
       objectReference: {fileID: 0}
     - target: {fileID: 498098, guid: c31ef79546f5eb54cb870b5c1cfc01a7, type: 3}
       propertyPath: m_LocalPosition.x

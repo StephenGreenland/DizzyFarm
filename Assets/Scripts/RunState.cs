@@ -21,7 +21,7 @@ public class RunState : StateBase
 
         Vector3 tempPos = transform.position + dirToPlayer * chickenScript.runSpeed;
 
-        chickenScript._agent.SetDestination(tempPos + new Vector3(chickenScript.randomrange+Random.Range(-2f,2f), 0 , -chickenScript.randomrange+Random.Range(-2f,2f)));
+        chickenScript._agent.SetDestination(tempPos);  // + new Vector3(chickenScript.randomrange+Random.Range(-2f,2f), 0 , -chickenScript.randomrange+Random.Range(-2f,2f)));
 
         if (chickenScript.spookypeople.Count == 0)
         {

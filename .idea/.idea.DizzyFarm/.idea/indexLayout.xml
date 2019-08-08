@@ -17,6 +17,7 @@
       <Path>.idea</Path>
       <Path>DizzyFarm</Path>
       <Path>Library</Path>
+      <Path>Temp</Path>
       <Path>fmodproject</Path>
       <Path>obj</Path>
     </explicitExcludes>

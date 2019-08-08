@@ -39,12 +39,12 @@ public class PerlinFence : MonoBehaviour
     private bool PerlinSaysOkay(Vector3 newPos)
     {
         //how quickly perlin noise changes
-        float freq = 8f;
+        float freq = 20;
 
         //Check current position
         float howSureIsPerlin = Mathf.PerlinNoise(newPos.x / 100 * freq, newPos.z / 100 * freq);
 
-        if (.6 <= howSureIsPerlin)
+        if (Random.Range(.3f,1f) <= howSureIsPerlin)
             return true;
         else
             return false;

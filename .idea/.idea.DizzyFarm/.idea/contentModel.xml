@@ -267,7 +267,6 @@
           <e p="RoamState.cs" t="Include" />
           <e p="RunState.cs" t="Include" />
           <e p="Scores.cs" t="Include" />
-          <e p="SmallAnimal.cs" t="Include" />
           <e p="SpawnChickens.cs" t="Include" />
           <e p="stateBase.cs" t="Include" />
           <e p="Threats.cs" t="Include" />

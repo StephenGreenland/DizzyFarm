@@ -28,7 +28,7 @@ public class ChickenScript : MonoBehaviour
     public StateBase runState;
     public StateBase idleState;
     public StateBase roamState;
-    
+
     
     public Vector3 wayPoint;
     public float randomrange;
@@ -40,6 +40,7 @@ public class ChickenScript : MonoBehaviour
 
     void Start()
     {
+        
         runState = GetComponent<RunState>();
         idleState = GetComponent<IdleState>();
         roamState = GetComponent<RoamState>();
@@ -54,6 +55,7 @@ public class ChickenScript : MonoBehaviour
         
         spookypeople = new List<GameObject>();
         
+        
         _agent = gameObject.GetComponent<NavMeshAgent>();
         
         
@@ -61,7 +63,9 @@ public class ChickenScript : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(currentstate);
+
+        
+        
         if (spookypeople.Count != 0)
         {
             ChanageState(runState);

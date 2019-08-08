@@ -8,6 +8,10 @@ public class CowScript : MonoBehaviour
     Rigidbody rb;
 
     public GameObject player;
+    public GameObject player2;
+
+    private bool p;
+    private bool o;
 
     public float speed;
 
@@ -23,30 +27,61 @@ public class CowScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (timer > 0)
+        if (p)
         {
-            timer = timer -Time.deltaTime;
-
-            transform.LookAt(player.GetComponent<Transform>().position);
-
-            // rb.AddRelativeForce(new Vector3(player.transform.position.x,this.gameObject.GetComponent<Transform>().position.y, player.transform.position.z) * speed);
-
-            rb.AddRelativeForce(0, 0, speed);
-
-            
+            Moove();
         }
 
+        if (o)
+        {
+            Moove2();
+        }
         
     }
 
      public void Moove()
      {
-        Debug.Log("slap");
+         timer = timer -Time.deltaTime;
+            
+         if (timer > 0)
+         {
+             transform.LookAt(player.GetComponent<Transform>().position);
 
-        // playsound
-
-        timer = 4f;
+             rb.AddRelativeForce(0, 0, speed);
+         }
 
      }
 
+     public void Moove2()
+     {
+         timer = timer -Time.deltaTime;
+        
+         if (timer > 0)
+         {
+             transform.LookAt(player2.GetComponent<Transform>().position);
+
+             rb.AddRelativeForce(0, 0, speed);
+         }
+         
+     }
+
+     void OnTriggerEnter(Collider col)
+     {
+
+         if (col.gameObject.tag == "Player")
+         {
+             
+             // knock the player over
+             timer = 0f;
+         }
+
+         if (col.gameObject.tag == "Fence")
+         {
+             Destroy(col.gameObject);
+             
+         }
+       
+    }
+
+     
 }
