@@ -7,8 +7,9 @@ using UnityEngine;
     public class StateBase : MonoBehaviour
     {
         public ChickenScript chickenScript;
+        public Animator ani;
 
-        public virtual void Enter()
+    public virtual void Enter()
         {
             
 

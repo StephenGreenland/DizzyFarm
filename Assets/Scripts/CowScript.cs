@@ -9,9 +9,10 @@ public class CowScript : MonoBehaviour
 
     public GameObject player;
     public GameObject player2;
+    private GameObject target;
 
-    private bool p;
-    private bool o;
+
+
 
     public float speed;
 
@@ -27,43 +28,31 @@ public class CowScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (p)
+        timer = timer - Time.deltaTime;
+
+        if (timer > 0)
         {
-            Moove();
+            transform.LookAt(target.GetComponent<Transform>().position);
+
+            rb.AddRelativeForce(0, 0, speed);
         }
 
-        if (o)
-        {
-            Moove2();
-        }
-        
+
     }
 
      public void Moove()
      {
-         timer = timer -Time.deltaTime;
-            
-         if (timer > 0)
-         {
-             transform.LookAt(player.GetComponent<Transform>().position);
-
-             rb.AddRelativeForce(0, 0, speed);
-         }
-
+        target = player;
+        timer = 4f;
      }
 
-     public void Moove2()
-     {
-         timer = timer -Time.deltaTime;
-        
-         if (timer > 0)
-         {
-             transform.LookAt(player2.GetComponent<Transform>().position);
+    public void Moove2()
+    {
+        target = player2;
+        timer = 4f;
 
-             rb.AddRelativeForce(0, 0, speed);
-         }
-         
-     }
+    }
+
 
      void OnTriggerEnter(Collider col)
      {

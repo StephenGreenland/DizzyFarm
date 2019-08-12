@@ -32,6 +32,8 @@ public class ChickenScript : MonoBehaviour
     
     public Vector3 wayPoint;
     public float randomrange;
+
+    
   
     #endregion
     

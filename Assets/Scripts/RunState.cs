@@ -10,19 +10,20 @@ public class RunState : StateBase
     public override void Enter()
     {
         base.Enter();
+        ani.SetBool("isIdle", false);
     }
 
     public override void Execute()
     {
         base.Execute();
+        
 
         Vector3 dirToPlayer = transform.position - chickenScript.getRunDirection();
         dirToPlayer.Normalize();
 
         Vector3 tempPos = transform.position + dirToPlayer * chickenScript.runSpeed;
 
-        chickenScript._agent.SetDestination(tempPos);  // + new Vector3(chickenScript.randomrange+Random.Range(-2f,2f), 0 , -chickenScript.randomrange+Random.Range(-2f,2f)));
-
+        chickenScript._agent.SetDestination(tempPos);
         if (chickenScript.spookypeople.Count == 0)
         {
             chickenScript.ChanageState(chickenScript.idleState);

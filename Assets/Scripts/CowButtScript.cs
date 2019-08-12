@@ -29,7 +29,7 @@ public class CowButtScript : MonoBehaviour
             cow.GetComponent<CowScript>().Moove();
         }
         
-        if (other.gameObject.tag == "hand2")
+        if (other.gameObject.tag == "Hand2")
         {
             
             cow.GetComponent<CowScript>().Moove2();

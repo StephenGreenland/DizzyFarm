@@ -8,6 +8,7 @@ TagManager:
   - Chicken
   - Interactable
   - Fence
+  - Hand2
   layers:
   - Default
   - TransparentFX

@@ -6,14 +6,16 @@ public class IdleState : StateBase
 {
     private float timer;
     public override void Enter()
-    {
+    {        
         base.Enter();
-        timer = 1f;
+        timer = 1.5f;
+        ani.SetBool("isIdle", true);
     }
 
     public override void Execute()
     {
         base.Execute();
+        
         timer = timer -Time.deltaTime;
 
         if (timer < 0)
