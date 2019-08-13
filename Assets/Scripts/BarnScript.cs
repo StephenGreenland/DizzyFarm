@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -13,20 +14,33 @@ public class BarnScript : MonoBehaviour
     public Text Score;
     public Text timer;
 
+  
+    
+
+ 
+    
+    
     int score;
     private float timeLeft;
     
     // Start is called before the first frame update
     void Start()
     {
+        
+        
         score = 0;
-        timeLeft = 180f;
+        timeLeft = 80f;
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        
+        
+
+        
         timeLeft = timeLeft - Time.deltaTime;
 
         if (timeLeft < 0)

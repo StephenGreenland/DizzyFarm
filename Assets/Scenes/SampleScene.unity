@@ -4345,6 +4345,7 @@ GameObject:
   - component: {fileID: 1297642335}
   - component: {fileID: 1297642337}
   - component: {fileID: 1297642336}
+  - component: {fileID: 1297642338}
   m_Layer: 0
   m_Name: BarnScriptObject
   m_TagString: Untagged
@@ -4393,6 +4394,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.7011642, y: 5.1789374, z: 17.345743}
   m_Center: {x: 0.833889, y: 0.48706698, z: -2.7437449}
+--- !u!114 &1297642338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297642334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Music
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Timer
+    Value: 180
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1305651367 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 138002, guid: fcc966d6c241ff748be022fb78915398,
@@ -6794,6 +6820,36 @@ PrefabInstance:
     - target: {fileID: 6827721927228564261, guid: 8fcfd3f4ae191f74eba55bb1274dd20c,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827721927228564261, guid: 8fcfd3f4ae191f74eba55bb1274dd20c,
+        type: 3}
+      propertyPath: Event
+      value: event:/FootSteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827721927228564261, guid: 8fcfd3f4ae191f74eba55bb1274dd20c,
+        type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827721927228564261, guid: 8fcfd3f4ae191f74eba55bb1274dd20c,
+        type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827721927228564261, guid: 8fcfd3f4ae191f74eba55bb1274dd20c,
+        type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827721927228564261, guid: 8fcfd3f4ae191f74eba55bb1274dd20c,
+        type: 3}
+      propertyPath: PlayEvent
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827721927228564261, guid: 8fcfd3f4ae191f74eba55bb1274dd20c,
+        type: 3}
+      propertyPath: StopEvent
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6993151982581882240, guid: 8fcfd3f4ae191f74eba55bb1274dd20c,

@@ -88,6 +88,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9427556, y: 1.1787286, z: 1.3279357}
   m_Center: {x: -0.007610619, y: 0.6253898, z: 0.050680876}
+--- !u!65 &257099791392059350
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979953360092749472}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.92018014, y: 1.5878397, z: 2.2048335}
+  m_Center: {x: 0.0036770701, y: 0.7879247, z: 0.18635759}
 --- !u!114 &1937302373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  player2: {fileID: 0}
+  fenceMat: {fileID: 13400000, guid: e740094e2cabc86439e9b52eb513fb7c, type: 2}
   speed: 100
 --- !u!114 &1937302378
 MonoBehaviour:
@@ -115,19 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTreat: 0
---- !u!65 &257099791392059350
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1979953360092749472}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.92018014, y: 1.5878397, z: 2.2048335}
-  m_Center: {x: 0.0036770701, y: 0.7879247, z: 0.18635759}
 --- !u!1001 &1981205461554089390
 PrefabInstance:
   m_ObjectHideFlags: 0

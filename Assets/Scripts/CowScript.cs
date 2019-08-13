@@ -11,9 +11,10 @@ public class CowScript : MonoBehaviour
     public GameObject player;
     public GameObject player2;
     private GameObject target;
+    private GameObject fence;
+    public PhysicMaterial fenceMat;
 
-
-
+    private float fenceSpeed;
 
     public float speed;
 
@@ -23,6 +24,7 @@ public class CowScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        fenceSpeed = 100f;
         rb = this.gameObject.GetComponent<Rigidbody>();
     }
 
@@ -67,11 +69,13 @@ public class CowScript : MonoBehaviour
 
          if (col.gameObject.tag == "Fence")
          {
-
-            //col.GetComponent<Rigibody>().Constraints = RigidbodyConstraints.FreezePosition;
-
-            //Destroy(col.gameObject);
              
+             col.GetComponent<Rigidbody>().isKinematic = false;
+             col.GetComponent<BoxCollider>().material = fenceMat;
+             
+             rb.AddRelativeForce(0, fenceSpeed, 0);
+             //Destroy(col.gameObject);
+
          }
        
        

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{38dcb05b-7ed8-48b2-a588-7ebc493837e3}">
+        <property name="assetPath">
+            <value>Old_MacDonald_Instrumental.mp3</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>139.96408163265306</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{90c3de10-3960-4ed7-8929-cc0b6179e8ee}</destination>
+        </relationship>
+    </object>
+</objects>
