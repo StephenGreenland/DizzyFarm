@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CowScript : MonoBehaviour
 {
 
-    Rigidbody rb;
+    private Rigidbody rb;
 
     public GameObject player;
     public GameObject player2;
@@ -66,9 +67,13 @@ public class CowScript : MonoBehaviour
 
          if (col.gameObject.tag == "Fence")
          {
-             Destroy(col.gameObject);
+
+            //col.GetComponent<Rigibody>().Constraints = RigidbodyConstraints.FreezePosition;
+
+            //Destroy(col.gameObject);
              
          }
+       
        
     }
 

@@ -23,7 +23,7 @@ public class PerlinFence : MonoBehaviour
                     if (PerlinSaysOkay(newPos))
                     {
                         
-                        Instantiate(fence, newPos, Random.Range(0,2) <1 ? Quaternion.Euler(-90,0,0): Quaternion.Euler(-90,0,90));
+                        Instantiate(fence, newPos, Random.Range(0,2) <1 ? Quaternion.Euler(-90,90,0): Quaternion.Euler(-90,90,90));
                         
                     }
                     
