@@ -405,6 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9085062b1405d134385a1703a5395ef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: {fileID: 1472231817}
 --- !u!1 &1068271631
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,12 +432,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068271631}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b233a362f9de3524fba1520ed9c21fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentScore: 0
+  Score: {fileID: 1472231817}
   currentLevel: 0
 --- !u!114 &1068271633
 MonoBehaviour:

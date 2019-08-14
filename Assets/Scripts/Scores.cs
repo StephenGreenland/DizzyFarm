@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
+using UnityEngine.UI;
 
 
 public class Scores : MonoBehaviour
@@ -14,6 +15,8 @@ public class Scores : MonoBehaviour
 
     string[] paths = { "Assets/HighScore.txt", "Assets/HighScore1.txt", "Assets/HighScore2.txt" };
 
+    public Text Score;
+
     public int currentLevel;
 
     // Start is called before the first frame update
@@ -21,12 +24,14 @@ public class Scores : MonoBehaviour
     {
        
         GetHighScore();
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
        
     }
     // compares the saved score agianst the currentscore

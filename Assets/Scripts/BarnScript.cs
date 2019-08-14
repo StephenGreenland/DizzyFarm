@@ -14,11 +14,7 @@ public class BarnScript : MonoBehaviour
     public Text Score;
     public Text timer;
 
-  
-    
 
- 
-    
     
     int score;
     private float timeLeft;
@@ -45,8 +41,10 @@ public class BarnScript : MonoBehaviour
 
         if (timeLeft < 0)
         {
-            SceneManager.LoadScene(1);
+            PlayerPrefs.SetInt("score", score);
 
+            SceneManager.LoadScene(1);
+            
         }
         timer.text = timeLeft.ToString();
 
@@ -55,7 +53,7 @@ public class BarnScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.tag == "Chicken")
+        if (other.gameObject.tag == "Animal")
         {
 
             print("do the thing!");

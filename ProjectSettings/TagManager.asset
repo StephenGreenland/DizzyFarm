@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - Fence
   - Hand2
+  - Animal
   layers:
   - Default
   - TransparentFX
