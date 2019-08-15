@@ -9,6 +9,11 @@ using UnityEngine;
         public ChickenScript chickenScript;
         public Animator ani;
 
+    private void Awake()
+    {
+        ani = GetComponentInChildren<Animator>();
+    }
+
     public virtual void Enter()
         {
             

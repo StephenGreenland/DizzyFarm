@@ -5,15 +5,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class BarnScript : MonoBehaviour
 {
-
+    public float sound;
     public delegate void Chickenhome();
     public static event Chickenhome OnInpen;
 
     public Text Score;
     public Text timer;
 
+    [FMODUnity.EventRef]
+    public string NAMEEVENT = "event:/Music";
+    public FMOD.Studio.EventInstance AUDIOEVENT;
+    public FMOD.Studio.ParameterInstance PARAMETEREVENT;
 
     
     int score;
@@ -22,7 +27,9 @@ public class BarnScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        AUDIOEVENT = FMODUnity.RuntimeManager.CreateInstance(NAMEEVENT);
+        AUDIOEVENT.getParameter("Timer", out PARAMETEREVENT);
+        AUDIOEVENT.start();
         
         score = 0;
         timeLeft = 80f;
@@ -32,11 +39,11 @@ public class BarnScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-        
 
-        
+        PARAMETEREVENT.setValue(timeLeft);
+        AUDIOEVENT.setVolume(sound);
+
+
         timeLeft = timeLeft - Time.deltaTime;
 
         if (timeLeft < 0)
