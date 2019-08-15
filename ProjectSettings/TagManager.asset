@@ -10,6 +10,7 @@ TagManager:
   - Fence
   - Hand2
   - Animal
+  - Player2
   layers:
   - Default
   - TransparentFX

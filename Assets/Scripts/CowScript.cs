@@ -63,7 +63,13 @@ public class CowScript : MonoBehaviour
          if (col.gameObject.tag == "Player")
          {
              
-             // knock the player over
+             col.gameObject.GetComponent<FarmerScript>().GotHit();
+             timer = 0f;
+         }
+         if (col.gameObject.tag == "Player2")
+         {
+             
+             col.gameObject.GetComponent<FarmerScript2>().GotHit();
              timer = 0f;
          }
 
