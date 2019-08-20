@@ -51,7 +51,7 @@ public class ChickenScript : MonoBehaviour
         
         runSpeed = 5f;
         
-        RuntimeManager.PlayOneShotAttached(footstepEvent, gameObject);
+       // RuntimeManager.PlayOneShotAttached(footstepEvent, gameObject);
         
         t = transform; 
         

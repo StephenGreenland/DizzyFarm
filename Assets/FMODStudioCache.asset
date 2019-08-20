@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114839286122643292}
-  - {fileID: 114900544548984376}
+  - {fileID: 114327631610278030}
   EditorEvents:
   - {fileID: 114723522815452866}
   - {fileID: 114109471688254258}
   MasterBanks:
-  - {fileID: 114900544548984376}
+  - {fileID: 114327631610278030}
   StringsBanks:
   - {fileID: 114839286122643292}
-  stringsBankWriteTime: 637014592121655631
+  stringsBankWriteTime: 637013298958153013
   cacheVersion: 3
 --- !u!114 &114099449129561716
 MonoBehaviour:
@@ -59,12 +59,12 @@ MonoBehaviour:
   Path: event:/Music
   guid: 7529d598ff3b4245ba9237d356061f01
   Banks:
-  - {fileID: 114900544548984376}
+  - {fileID: 114327631610278030}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114466920051876338}
+  - {fileID: 114612161928570130}
   MinDistance: 0
   MaxDistance: 0
   Length: 139964
@@ -159,6 +159,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 17984
   Exists: 0
+--- !u!114 &114327631610278030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Skipsy\Desktop\thing\DizzyFarm\fmodproject\fmod project\Build\Desktop\Master
+    Bank.bank
+  lastModified: 637015696953769892
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1903616
+  Exists: 1
 --- !u!114 &114344292123841328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +229,7 @@ MonoBehaviour:
   Min: 0
   Max: 180
   Default: 180
-  Exists: 1
+  Exists: 0
 --- !u!114 &114474577720663586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +284,23 @@ MonoBehaviour:
   Max: 180
   Default: 180
   Exists: 0
+--- !u!114 &114612161928570130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Timer
+  m_EditorClassIdentifier: 
+  Name: Timer
+  Min: 0
+  Max: 180
+  Default: 180
+  Exists: 1
 --- !u!114 &114657068338353764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,7 +373,7 @@ MonoBehaviour:
   Path: event:/FootSteps
   guid: 3479194f1c013448a6eb6473e0f5bd27
   Banks:
-  - {fileID: 114900544548984376}
+  - {fileID: 114327631610278030}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -414,7 +451,7 @@ MonoBehaviour:
   m_Name: bank:/Master Bank.strings.bank
   m_EditorClassIdentifier: 
   Path: fmodproject\fmod project\Build\Desktop\Master Bank.strings.bank
-  lastModified: 637014592121655631
+  lastModified: 637013298958153013
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -459,7 +496,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1903616
-  Exists: 1
+  Exists: 0
 --- !u!114 &114919265296965016
 MonoBehaviour:
   m_ObjectHideFlags: 0
