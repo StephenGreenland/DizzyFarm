@@ -25,7 +25,7 @@ public class RoamState : StateBase
         {
            chickenScript.ChanageState(chickenScript.idleState);
         }
-        if(timer > 0)
+        if(timer < 0)
         {
             chickenScript.ChanageState(chickenScript.idleState);
 

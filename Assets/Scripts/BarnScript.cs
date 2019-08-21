@@ -32,7 +32,7 @@ public class BarnScript : MonoBehaviour
         AUDIOEVENT.start();
         
         score = 0;
-        timeLeft = 80f;
+        timeLeft = 180f;
         
     }
 
@@ -50,7 +50,7 @@ public class BarnScript : MonoBehaviour
         {
             PlayerPrefs.SetInt("score", score);
 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
             
         }
         timer.text = timeLeft.ToString();
