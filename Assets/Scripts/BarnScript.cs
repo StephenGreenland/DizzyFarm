@@ -50,7 +50,7 @@ public class BarnScript : MonoBehaviour
         {
             PlayerPrefs.SetInt("score", score);
 
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(0);
             
         }
         timer.text = timeLeft.ToString();

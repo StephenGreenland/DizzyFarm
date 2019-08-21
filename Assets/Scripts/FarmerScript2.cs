@@ -129,8 +129,8 @@ public class FarmerScript2 : MonoBehaviour
         isKnockedOver = true;
         
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        gameObject.GetComponent<Rigidbody>().maxAngularVelocity = 99999999999999999;
-        gameObject.GetComponent<Rigidbody>().angularVelocity = new Vector3(Random.Range(-max,max), Random.Range(-max,max), Random.Range(-max,max));
+       // gameObject.GetComponent<Rigidbody>().maxAngularVelocity = 99999999999999999;
+       // gameObject.GetComponent<Rigidbody>().angularVelocity = new Vector3(Random.Range(-max,max), Random.Range(-max,max), Random.Range(-max,max));
 
         timer = 3f;
         

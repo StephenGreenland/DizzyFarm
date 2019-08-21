@@ -24,7 +24,7 @@ public class Infarm : MonoBehaviour
     void Update()
     {
      
-        if (!isOnFarm)
+        if (isOnFarm == false)
         {
             timer = -Time.deltaTime;
 
@@ -36,7 +36,7 @@ public class Infarm : MonoBehaviour
             isOnFarm = true;
 
         }
-        if (!isOnFarm2)
+        if (isOnFarm2 == false)
         {
             timer2 = -Time.deltaTime;
 
