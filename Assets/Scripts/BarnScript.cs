@@ -12,6 +12,8 @@ public class BarnScript : MonoBehaviour
     public delegate void Chickenhome();
     public static event Chickenhome OnInpen;
 
+   
+
     public Text Score;
     public Text timer;
 
@@ -20,6 +22,7 @@ public class BarnScript : MonoBehaviour
     public FMOD.Studio.EventInstance AUDIOEVENT;
     public FMOD.Studio.ParameterInstance PARAMETEREVENT;
 
+      
     
     int score;
     private float timeLeft;
@@ -34,6 +37,7 @@ public class BarnScript : MonoBehaviour
         score = 0;
         timeLeft = 180f;
         
+
     }
 
     // Update is called once per frame
@@ -53,7 +57,10 @@ public class BarnScript : MonoBehaviour
             SceneManager.LoadScene(0);
             
         }
-        timer.text = timeLeft.ToString();
+
+        timer.text = Mathf.Round(timeLeft).ToString();
+        //timer.text = timeLeft.ToString();
+
 
 
     }

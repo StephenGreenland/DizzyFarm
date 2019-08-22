@@ -14,9 +14,14 @@ public class CowScript : MonoBehaviour
     private GameObject fence;
     public PhysicMaterial fenceMat;
 
+    public AudioClip[] Moos;
+    private AudioSource aS;
+
     private float fenceSpeed;
 
     public float speed;
+
+    
 
     float timer;
 
@@ -24,6 +29,7 @@ public class CowScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        aS = this.gameObject.GetComponent<AudioSource>();
         fenceSpeed = 100f;
         rb = this.gameObject.GetComponent<Rigidbody>();
     }
@@ -47,13 +53,16 @@ public class CowScript : MonoBehaviour
      {
         target = player;
         timer = 4f;
+        aS.clip = Moos[Random.RandomRange(0,Moos.Length)];
+        aS.Play();
      }
 
     public void Moove2()
     {
         target = player2;
         timer = 4f;
-
+        aS.clip = Moos[Random.RandomRange(0, Moos.Length)];
+        aS.Play();
     }
 
 

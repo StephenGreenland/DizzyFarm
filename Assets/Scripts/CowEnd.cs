@@ -16,7 +16,7 @@ public class CowEnd : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.LookAt(sheep.GetComponent<Transform>().position);
         rb.AddRelativeForce(0, 0, speed);

@@ -82,7 +82,7 @@ public class ChickenScript : MonoBehaviour
         {
             spookypeople.Add(other.gameObject);
 
-            print(spookypeople[0]);
+            
         }
     }
 
@@ -90,7 +90,7 @@ public class ChickenScript : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Threats>() != null)
         {
-            print(spookypeople[0]);
+            
             
             spookypeople.Remove(other.gameObject);
         }
@@ -107,7 +107,7 @@ public class ChickenScript : MonoBehaviour
 
         averageDis = averageDis / spookypeople.Count;
         
-        Debug.DrawLine(averageDis,averageDis+Vector3.up*10f, Color.red);
+        
         
         return averageDis;
     }
